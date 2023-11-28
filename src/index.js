@@ -12,11 +12,19 @@ const onClickAdd = () => {
     const p = document.createElement("p");
     p.className = "todo-item";
     p.innerText = inputText;
-    // button作成
+    // button(完了)作成
     const completeButton = document.createElement("button");
     completeButton.innerText = "完了";
+    completeButton.addEventListener("click",() => alert("完了"));
+
+    // button(削除)作成
     const deleteButton = document.createElement("button");
     deleteButton.innerText = "削除";
+    deleteButton.addEventListener("click",()=> {
+        // closest 最も近い要素を取得する
+        const deleteTarget = deleteButton.closest("li");
+        document.getElementById("imcomplete-list").removeChild(deleteTarget);
+    });
 
     // 階層構造の作成 li -> div -> p
     div.appendChild(p);
@@ -25,7 +33,7 @@ const onClickAdd = () => {
     li.appendChild(div);
     
     // id=imcomplete-listの下に要素を追加
-    document.getElementById("imcompleate-list").appendChild(li);
+    document.getElementById("imcomplete-list").appendChild(li);
 
 }
 
