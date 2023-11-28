@@ -12,9 +12,16 @@ const onClickAdd = () => {
     const p = document.createElement("p");
     p.className = "todo-item";
     p.innerText = inputText;
+    // button作成
+    const completeButton = document.createElement("button");
+    completeButton.innerText = "完了";
+    const deleteButton = document.createElement("button");
+    deleteButton.innerText = "削除";
 
     // 階層構造の作成 li -> div -> p
     div.appendChild(p);
+    div.append(completeButton);
+    div.append(deleteButton);
     li.appendChild(div);
     
     // id=imcomplete-listの下に要素を追加
