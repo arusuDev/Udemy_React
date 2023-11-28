@@ -30,6 +30,12 @@ const createIncompleteTodo = (todo) => {
         // 戻すボタンを生成してdivタグ配下に設定する
         const backButton = document.createElement("button");
         backButton.innerText = "戻す";
+        backButton.addEventListener("click",() => {
+            const todoText = backButton.previousElementSibling.innerText;
+            createIncompleteTodo(todoText);
+            // 戻すボタンが含まれるliタグを取得してremoveする
+            backButton.closest("li").remove();
+        })
         // 最初の子要素を取得(firstElementChild)
         moveTarget.firstElementChild.appendChild(backButton);
 
