@@ -237,3 +237,6 @@ const nameArr = ["arusu","aki","darede"];
 
 // console.log(checkSum(50,60));
 // console.log(checkSum(20,60));
+
+// ||は左側がtruthyのときにその時点で返却
+// &&は左側がfalthyのときにその時点で返却
