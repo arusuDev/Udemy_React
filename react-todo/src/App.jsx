@@ -1,19 +1,20 @@
-export const App = () => {
-  const onClickButton = () => alert();
-  // CSS インラインスタイル
-  // Reactで記載する場合はcamelCaseで書くこと。
-  // fontsize -> fontSize
-  // 数値は数値として記載できるが、オブジェクトとして使うため、
-  // colorコードなどは文字列として定義する。
-  const contentStyle = {
-    color: "blue",
-    fontSize: "3rem",
-  };
+import { useState } from "react";
+import { ColorfulMessage } from "./components/ColorfulMessage";
 
+export const App = () => {
+  // useStateは関数コンポーネントの一番上の階層でしか呼び出せない。
+  const [num, setNum] = useState(0);
+  const onClickCountUp = () => {
+    setNum((prev) => prev + 1);
+    setNum((prev) => prev + 1);
+  };
   return (
     <div>
-      <h1 style={contentStyle}>Hello React!</h1>
-      <button onClick={onClickButton}>ボタン</button>
+      <ColorfulMessage color="red"> This is Children </ColorfulMessage>
+      <ColorfulMessage color="blue"> Hello,React </ColorfulMessage>
+      <ColorfulMessage color="green"> Hello,React! </ColorfulMessage>
+      <button onClick={onClickCountUp}>CountUp</button>
+      <p>State:{num}</p>
     </div>
   );
 };
