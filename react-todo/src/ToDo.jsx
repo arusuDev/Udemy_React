@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./style.css";
 
 export const ToDo = () => {
+  const [todoText, setTodoText] = useState("");
   const [imcompleteToDos, setIncompleteTodos] = useState([
     "TODOです1",
     "TODOです2",
@@ -12,11 +13,25 @@ export const ToDo = () => {
     "完了したTODOです2",
   ]);
 
+  // onChangeはeventを受け取る
+  const onChangeToDoText = (event) => setTodoText(event.target.value);
+  const onClickAdd = () => {
+    if (todoText === "") return;
+    // スプレッド構文を利用して配列を複製する。
+    const newTodos = [...imcompleteToDos, todoText];
+    setIncompleteTodos(newTodos);
+    setTodoText("");
+  };
+
   return (
     <>
       <div className="input-area">
-        <input placeholder="ToDoを入力" />
-        <button>追加</button>
+        <input
+          placeholder="ToDoを入力"
+          value={todoText}
+          onChange={onChangeToDoText}
+        />
+        <button onClick={onClickAdd}>追加</button>
       </div>
       <div className="imcompleate-area">
         <p className="area-title">未完了のToDo</p>
