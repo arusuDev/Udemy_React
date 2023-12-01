@@ -13,13 +13,13 @@ export const App = () => {
   };
 
   // useEffectは第二引数の配列の値が変更かかった場合のみ実行される。
-  useEffect(() => {
-    if (num % 3 === 0 && num > 0) {
-      isShowChar || setIsShowChar(true);
-    } else {
-      isShowChar && setIsShowChar(false);
-    }
-  }, [num]);
+  // useEffect(() => {
+  //   if (num % 3 === 0 && num > 0) {
+  //     isShowChar || setIsShowChar(true);
+  //   } else {
+  //     isShowChar && setIsShowChar(false);
+  //   }
+  // }, [num]);
 
   // Too many re-renders.
   // if (num % 3 === 0) {
