@@ -1,67 +1,67 @@
 body {
-    font-family: sans-serif ;
-    color: #444
+  font-family: sans-serif;
+  color: #444;
 }
 
 input {
-    border-radius: 8px;
-    border: none;
-    padding: 6px 16px;
+  border-radius: 8px;
+  border: none;
+  padding: 6px 16px;
 }
 
-button{
-    border-radius: 8px;
-    border: none;
-    padding: 4px 16px;
-    margin: 0px 2px;
+button {
+  border-radius: 8px;
+  border: none;
+  padding: 4px 16px;
+  margin: 0px 2px;
 }
 /* ホバーした時のスタイル */
-button:hover{
-    background-color: rgb(0, 186, 0);
-    color: #FFFFFF;
-    cursor: pointer;
+button:hover {
+  background-color: rgb(0, 186, 0);
+  color: #ffffff;
+  cursor: pointer;
 }
 
-.input-area{
-    background-color: rgb(130, 223, 192);
-    width: 400px;
-    height: 30px;
-    padding: 8px;
-    margin: 8px;
-    border-radius: 8px;
+.input-area {
+  background-color: rgb(130, 223, 192);
+  width: 400px;
+  height: 30px;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
 }
 
-.imcompleate-area{
-    background-color: #FFFFFF;
-    width: 400px;
-    min-height: 200px;
-    border: 2px solid cadetblue;
-    padding: 8px;
-    margin: 8px;
-    border-radius: 8px;
+.incompleate-area {
+  background-color: #ffffff;
+  width: 400px;
+  min-height: 200px;
+  border: 2px solid cadetblue;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
 }
 
-.completed-area{
-    background-color:rgb(255, 246, 116);
-    width: 400px;
-    min-height: 200px;
-    border: 2px solid darkorange;
-    padding: 8px;
-    margin: 8px;
-    border-radius: 8px;    
+.completed-area {
+  background-color: rgb(255, 246, 116);
+  width: 400px;
+  min-height: 200px;
+  border: 2px solid darkorange;
+  padding: 8px;
+  margin: 8px;
+  border-radius: 8px;
 }
 
-.area-title{
-    text-align: center;
-    margin-top: 0;
-    font-weight: bold;
+.area-title {
+  text-align: center;
+  margin-top: 0;
+  font-weight: bold;
 }
 
-.list-row{
-    display: flex;
-    align-items: center;
+.list-row {
+  display: flex;
+  align-items: center;
 }
 
-.todo-item{
-    margin: 6px;
+.todo-item {
+  margin: 6px;
 }
