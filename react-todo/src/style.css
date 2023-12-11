@@ -22,14 +22,14 @@ button:hover {
   cursor: pointer;
 }
 
-.input-area {
-  background-color: rgb(130, 223, 192);
+/* .input-area {
+  background-color: #82dfc0;
   width: 400px;
   height: 30px;
   padding: 8px;
   margin: 8px;
   border-radius: 8px;
-}
+} */
 
 .incompleate-area {
   background-color: #ffffff;

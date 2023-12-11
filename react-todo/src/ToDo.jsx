@@ -6,15 +6,9 @@ import { CompleteTodos } from "./components/CompleteTodos";
 
 export const ToDo = () => {
   const [todoText, setTodoText] = useState("");
-  const [incompleteTodDos, setIncompleteTodos] = useState([
-    "TODOです1",
-    "TODOです2",
-  ]);
+  const [incompleteTodDos, setIncompleteTodos] = useState([]);
 
-  const [completeToDos, setCompleteToDos] = useState([
-    "完了したTODOです1",
-    "完了したTODOです2",
-  ]);
+  const [completeToDos, setCompleteToDos] = useState([]);
 
   // onChangeはeventを受け取る
   const onChangeToDoText = (event) => setTodoText(event.target.value);
@@ -54,13 +48,19 @@ export const ToDo = () => {
     setIncompleteTodos(newInCompleteTodos);
     setCompleteToDos(newCompleteTodos);
   };
+
+  const onActive = incompleteTodDos.length >= 5;
   return (
     <>
       <InputTodo
         todoText={todoText}
         onChange={onChangeToDoText}
         onClick={onClickAdd}
+        onActive={onActive}
       />
+      {onActive && (
+        <p style={{ color: "red" }}>登録できるTODOは5個までっす。</p>
+      )}
       <IncompleteTodos
         onClickComplete={onClickComplete}
         onClickDelete={onClickDelete}
